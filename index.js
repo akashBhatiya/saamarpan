@@ -39,7 +39,7 @@ app.post('/send-email', function(req,res){
         }
         else{
             console.log('Email sent',info.response);
-            return res.redirect('back');
+            return res.redirect('/');
         }
     })
 
