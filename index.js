@@ -7,7 +7,7 @@ const app = express();
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static(path.join(__dirname,'front end')));
+app.use(express.static(path.join(__dirname,'public')));
 
 
 app.post('/send-email', function(req,res){
@@ -47,7 +47,7 @@ app.post('/send-email', function(req,res){
 
 
 app.get('/', function(req,res){
-    res.sendFile(path.join(__dirname,'./front end/index.html'));
+    res.sendFile(path.join(__dirname,'./public/index.html'));
 })
 
 app.listen(port,function(err){
